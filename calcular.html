@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Força Total - Calculadora 1RM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="imagens/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header id="topo-da-pagina">
+    <h1 class="logo">Força Total</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="tipos.html">Tipos de Treino</a></li>
+        <li><a href="calcular.html" class="ativo">Calculadora 1RM</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Calculadora de 1RM</h2>
+      
+      <div class="calculadora">
+        <div class="form">
+          <label>Peso Levantado (kg):</label>
+          <input type="number" id="peso" min="1" placeholder="Ex: 70">
+        </div>
+        
+        <div class="form">
+          <label>Número de Repetições:</label>
+          <input type="number" id="reps" min="1" placeholder="Ex: 8">
+        </div>
+        
+        <button id="calcular">Calcular 1RM</button>
+        
+        <div class="result" id="resultado">
+          <h4>Seu 1RM estimado é:</h4>
+          <div id="rm-valor">-</div>
+          <p>Baseado na Fórmula de Epley: 1RM = Peso × (1 + Repetições/30)</p>
+        </div>
+      </div>
+      
+      <div class="explicacao">
+        <h3>Sobre o 1RM e a Fórmula de Epley</h3>
+        <p>O 1RM (Uma Repetição Máxima) representa o peso máximo que você pode levantar em um único exercício com a técnica correta.</p>
+        <p>A <strong>Fórmula de Epley</strong> é um método preciso para estimar seu 1RM sem precisar tentar o peso máximo, reduzindo o risco de lesões.</p>
+        <p>Para melhores resultados, use um peso que você consegue levantar entre 2 e 10 repetições.</p>
+      </div>
+    </section>
+
+    <a href="#topo-da-pagina" id="voltar-topo"></a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Força Total</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

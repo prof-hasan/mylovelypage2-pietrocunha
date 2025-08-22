@@ -1,0 +1,432 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #222;
+  line-height: 1.6;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  background: #111;
+  color: #fff;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  position: relative;
+  color: #f44336;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.logo::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(imagens/icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ddd;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu li a:hover {
+  background: #f44336;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.menu li a.ativo {
+  background: #f44336;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 2em;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+section {
+  margin-bottom: 2.5em;
+  padding: 1.5em;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tabela-selecao {
+  margin-top: 3em;
+}
+
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.8em;
+  color: #f44336;
+  border-bottom: 2px solid #f44336;
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  margin: 1.5em 0 0.8em 0;
+  color: #333;
+}
+
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  align-items: center;
+  margin: 2.5em 0;
+}
+
+.imagem-esquerda {
+  order: 1;
+}
+
+.texto-direita {
+  order: 2;
+}
+
+.imagem-direita {
+  order: 2;
+  justify-content: end;
+}
+
+.texto-esquerda {
+  order: 1;
+}
+
+.conteudo-imagem {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.conteudo-imagem:hover {
+  transform: scale(1.02);
+}
+    
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+
+ul {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+li {
+  margin-bottom: 0.5em;
+  position: relative;
+  list-style-type: none;
+}
+
+li::before {
+  content: "•";
+  color: #f44336;
+  font-weight: bold;
+  font-size: large;
+  display: inline-block;
+  width: .9em;
+  margin-left: -1em;
+}
+
+a {
+  color: #f44336;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+table th {
+  background: #f44336;
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tr:hover {
+  background: #f1f1f1;
+}
+
+
+dl {
+  margin: 1.5em 0;
+}
+
+dt {
+  font-weight: bold;
+  color: #f44336;
+  margin-top: 1.2em;
+  font-size: 1.2em;
+}
+
+dd {
+  margin-bottom: 1.5em;
+  margin-left: 1.5em;
+  line-height: 1.6;
+}
+
+
+pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1.5em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+}
+
+
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em;
+  margin-top: 2em;
+}
+
+
+@media (max-width: 900px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  
+  .sobre-conteudo {
+    grid-template-columns: 1fr;
+  }
+  
+  .imagem-esquerda, .imagem-direita, .texto-esquerda, .texto-direita {
+    order: 0;
+  }
+  
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+  }
+  
+  .menu {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1em;
+    width: 95%;
+  }
+  
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+  }
+  
+  .logo {
+    font-size: 2.2rem;
+  }
+  
+  section {
+    padding: 1em;
+  }
+  
+  .conteudo, .sobre-conteudo {
+    gap: 1.5em;
+  }
+}
+
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form input {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form input:focus {
+  border-color: #f44336;
+  outline: none;
+}
+
+button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1em;
+}
+
+button:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+.result {
+  text-align: center;
+  margin-top: 2em;
+  padding: 1.5em;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 5px solid #f44336;
+}
+
+.result h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #f44336;
+  margin-bottom: 0.5em;
+}
+
+#rm-valor {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f44336;
+  margin: 0.5em 0;
+}
+
+.explicacao {
+  background: #e8f5e9;
+  padding: 1px 3%;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+
+#voltar-topo {
+  background-color: rgb(58, 58, 58);
+  border-radius: 20%;
+  border: 2px solid rgb(6.7, 6.7, 6.7);
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  background-image: url(imagens/seta_cima.png);
+  background-size: 60%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+
+#voltar-topo:hover {
+  background-color: rgb(177, 176, 176);
+  transform: translateY(-2px);
+}
+
+.logo:hover::after {
+  transform: rotate(720deg);
+  transition: transform 1s ease;
+}
+
+dl dd img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  border-radius: 8px;
+}
