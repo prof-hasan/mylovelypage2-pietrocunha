@@ -132,7 +132,6 @@ h3 {
 
 .imagem-direita {
   order: 2;
-  justify-content: end;
 }
 
 .texto-esquerda {
@@ -385,7 +384,7 @@ button:hover {
 #voltar-topo {
   background-color: rgb(58, 58, 58);
   border-radius: 20%;
-  border: 2px solid rgb(6.7, 6.7, 6.7);
+  border: 2px solid rgb(6.7, 6.7, 6.7, .6);
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -440,3 +439,13 @@ button:hover {
     border-radius: 8px;
   }
 }
+
+dl dd img {
+  transition: transform 0.3s ease;
+}
+
+dl dd img:hover {
+  transform: scale(1.02);
+}
+
+
