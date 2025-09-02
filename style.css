@@ -138,10 +138,15 @@ h3 {
   order: 1;
 }
 
+.imagem-direita, .imagem-esquerda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .imagem-direita p, .imagem-esquerda p {
   font-size: small;
   color: #505050;
-  text-align: center;
 }
 
 .conteudo-imagem {
